@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
 }
+
 .inner {
     height: 100%;
     width: var(--default-layout-width);
@@ -53,6 +54,19 @@
         border-color: rgba(22, 24, 35, 0.2);
     }
 }
+.search,
+.result-search {
+    width: 361px;
+}
+.search-title {
+    height: 30px;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: rgba(22, 24, 35, 0.5);
+}
+
 .clear,
 .loading {
     position: absolute;
