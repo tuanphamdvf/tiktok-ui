@@ -1,5 +1,5 @@
 .menu-list {
-    width: 224px;
+    width: 223px;
 
     .menu-item {
         margin-left: 0;
@@ -8,4 +8,22 @@
 .menu-popper {
     padding-bottom: 8px;
     padding-top: 8px;
+}
+//header
+.header {
+    position: relative;
+    height: 50px;
+    margin-top: -8px;
+}
+.back-btn {
+    width: 50px;
+    height: 100%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

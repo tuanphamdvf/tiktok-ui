@@ -75,9 +75,11 @@
 .menuItem {
     justify-content: flex-start;
     width: 100%;
-    padding: 11px 16px;
+    padding: 10px 16px;
     border-radius: 0;
-    font-weight: 550;
+    font-weight: 600;
+    line-height: 22px;
+    border: 0;
     &:hover {
         background: rgba(22, 24, 35, 0.03);
     }
