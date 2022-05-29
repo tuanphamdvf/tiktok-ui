@@ -7,6 +7,7 @@
     --text-color: #333;
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
+    --white: #ffffff;
 }
 //default layout
 
@@ -30,6 +31,6 @@ input,
     border: none;
 }
 a[href] {
-    color: var (--text-color);
     text-decoration: none;
+    color: var(--text-color);
 }
