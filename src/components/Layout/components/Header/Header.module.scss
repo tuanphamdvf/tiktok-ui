@@ -96,7 +96,11 @@
     align-items: center;
     position: relative;
 }
-
+//ACTION
+.actions {
+    display: flex;
+    align-items: center;
+}
 .more-btn {
     font-size: 2rem;
     margin-left: 28px;
@@ -105,3 +109,17 @@
     cursor: pointer;
 }
 // menuleft
+.action-btn {
+    background-color: transparent;
+    font-size: 2.2rem;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}

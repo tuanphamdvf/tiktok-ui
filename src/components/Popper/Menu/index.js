@@ -3,60 +3,59 @@ import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import MenuItem from './MenuItem';
 import styles from './Menu.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faQuestionCircle, faKeyboard } from '@fortawesome/free-regular-svg-icons';
-import { faEarth } from '@fortawesome/free-solid-svg-icons';
+import 'tippy.js/dist/tippy.css';
+
 import Header from './Header';
 import { useState } from 'react';
 
-const MENU_ITEMS = [
-    {
-        icon: <FontAwesomeIcon icon={faEarth} />,
-        title: 'English',
-        children: {
-            title: 'Language',
-            data: [
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                    // children: {
+// const MENU_ITEMS = [
+//     {
+//         icon: <FontAwesomeIcon icon={faEarth} />,
+//         title: 'English',
+//         children: {
+//             title: 'Language',
+//             data: [
+//                 {
+//                     type: 'language',
+//                     code: 'en',
+//                     title: 'English',
+//                     // children: {
 
-                    //     title: 'Option',
-                    //     data: [
-                    //         { code: 'en1', title: 'Highlight ' ,
-                    //     },
+//                     //     title: 'Option',
+//                     //     data: [
+//                     //         { code: 'en1', title: 'Highlight ' ,
+//                     //     },
 
-                    //         {
-                    //             code: 'en2',
-                    //             title: 'normal',
-                    //         },
-                    //     ],
-                    // },
-                },
-                {
-                    code: 'vi',
-                    title: 'Tiếng Việt ',
-                },
-            ],
-        },
-    },
-    {
-        icon: <FontAwesomeIcon icon={faQuestionCircle} />,
-        title: 'Feedback and help',
-        to: 'feedback',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faKeyboard} />,
-        title: 'Keyboard shortcuts',
-    },
-];
+//                     //         {
+//                     //             code: 'en2',
+//                     //             title: 'normal',
+//                     //         },
+//                     //     ],
+//                     // },
+//                 },
+//                 {
+//                     code: 'vi',
+//                     title: 'Tiếng Việt ',
+//                 },
+//             ],
+//         },
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faQuestionCircle} />,
+//         title: 'Feedback and help',
+//         to: 'feedback',
+//     },
+//     {
+//         icon: <FontAwesomeIcon icon={faKeyboard} />,
+//         title: 'Keyboard shortcuts',
+//     },
+// ];
 
 const cx = classNames.bind(styles);
 const defaultFn = () => {};
 
-function Menu({ children, onChange = defaultFn }) {
-    const [history, setHistory] = useState([{ data: MENU_ITEMS }]);
+function Menu({ children, items, onChange = defaultFn }) {
+    const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
     const renderItems = () => {
@@ -81,8 +80,9 @@ function Menu({ children, onChange = defaultFn }) {
 
     return (
         <Tippy
+            offset={[8, 14]}
             interactive
-            delay={[0, 800]}
+            delay={[0, 700]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
@@ -99,6 +99,7 @@ function Menu({ children, onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             )}
+            onHide={() => setHistory((pre) => pre.slice(0, 1))}
         >
             {children}
         </Tippy>
