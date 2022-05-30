@@ -22,7 +22,8 @@ import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
-import { faClone, faComment } from '@fortawesome/free-regular-svg-icons';
+import { MessIcon, InboxIcon } from '~/components/Icon';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(Styles);
 let currentUser = true;
@@ -150,13 +151,13 @@ function Header() {
                         <>
                             <Tippy content="Inbox" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faClone} />
+                                    <MessIcon />
                                 </button>
                             </Tippy>
 
                             <Tippy content="Messgae" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faComment} />
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -165,7 +166,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ea0854578085ab26effc2c7b8cefa270~c5_100x100.jpeg?x-expires=1653984000&x-signature=TfhK3cZfAk01tnq9aGVGQ%2BYCSEc%3D"
                                 className={cx('user-avatar')}
                                 alt="phuonguyen"
