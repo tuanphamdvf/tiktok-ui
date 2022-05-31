@@ -7,6 +7,7 @@
     display: flex;
     width: var(--default-layout-width);
     padding: 0 var(--default-layout-horizoltal-spacer);
+    margin-top: var(--default-layout-header-height);
 }
 .content {
     flex: 1;

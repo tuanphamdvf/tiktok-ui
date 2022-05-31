@@ -19,7 +19,7 @@ import 'tippy.js/dist/tippy.css';
 import Menu from '~/components/Popper/Menu';
 import { MessIcon, InboxIcon } from '~/components/Icon';
 import Image from '~/components/Image';
-import Search from '~/components/Layout/components/Search';
+import Search from '~/layouts/components/Search';
 import { Link } from 'react-router-dom';
 import routesConfig from '~/config/routes';
 
@@ -36,20 +36,8 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'en',
                     title: 'English',
-                    // children: {
-
-                    //     title: 'Option',
-                    //     data: [
-                    //         { code: 'en1', title: 'Highlight ' ,
-                    //     },
-
-                    //         {
-                    //             code: 'en2',
-                    //             title: 'normal',
-                    //         },
-                    //     ],
-                    // },
                 },
+
                 {
                     code: 'vi',
                     title: 'Tiếng Việt ',
@@ -130,7 +118,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ea0854578085ab26effc2c7b8cefa270~c5_100x100.jpeg?x-expires=1653984000&x-signature=TfhK3cZfAk01tnq9aGVGQ%2BYCSEc%3D"
+                                src="https://i.ex-cdn.com/60giay.com/files/content/2022/01/03/img_5209-1437.jpg"
                                 className={cx('user-avatar')}
                                 alt="phuonguyen"
                             />
