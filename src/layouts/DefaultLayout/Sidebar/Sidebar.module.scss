@@ -1,3 +1,31 @@
 .wrapper {
-    width: 356px;
+    width: 348px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px 26px 8px;
+    overflow: auto;
+}
+.LIVE {
+    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+}
+
+.btn-login {
+    width: 340px;
+    height: 156px;
+    padding: 20px 8px 24px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+}
+.text-login {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 16px;
+    line-height: 22px;
+}
+.suggested-accounts {
+    padding: 16px 0px;
+    width: 340px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
 }

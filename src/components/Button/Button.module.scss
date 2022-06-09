@@ -85,3 +85,46 @@
         background: rgba(22, 24, 35, 0.03);
     }
 }
+.menuSidebar {
+    width: 340px;
+    height: 48px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: ease-in-out 200ms;
+    font-size: 16px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+.loginSidebar {
+    justify-content: center;
+    border-color: var(--primary);
+    background-color: var(--white);
+    color: var(--primary);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    min-width: 168px;
+    min-height: 48px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+    font-family: SofiaPro, PingFangSC, sans-serif;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 6px 8px;
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}

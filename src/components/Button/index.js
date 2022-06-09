@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
@@ -19,6 +20,8 @@ function Button({
     leftIcon,
     rightIcon,
     menuItem,
+    menuSidebar,
+    loginSidebar,
 
     ...passProps
 }) {
@@ -42,7 +45,18 @@ function Button({
         props.href = href;
         Comp = 'a';
     }
-    const classes = cx('wrapper', { primary, outline, small, large, text, disabled, rounded, menuItem });
+    const classes = cx('wrapper', {
+        primary,
+        outline,
+        small,
+        large,
+        text,
+        disabled,
+        rounded,
+        menuItem,
+        menuSidebar,
+        loginSidebar,
+    });
     return (
         <Comp className={classes} {...props}>
             {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
@@ -51,5 +65,22 @@ function Button({
         </Comp>
     );
 }
-
+Button.propTypes = {
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func,
+    to: PropTypes.string,
+    href: PropTypes.string,
+    text: PropTypes.bool,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    large: PropTypes.bool,
+    small: PropTypes.bool,
+    rounded: PropTypes.bool,
+    disabled: PropTypes.bool,
+    leftIcon: PropTypes.node,
+    rightIcon: PropTypes.node,
+    menuItem: PropTypes.bool,
+    menuSidebar: PropTypes.bool,
+    loginSidebar: PropTypes.bool,
+};
 export default Button;
