@@ -100,7 +100,7 @@ function Menu({ children, items, hideOnClick = false, onChange = defaultFn }) {
                     </PopperWrapper>
                 </div>
             )}
-            onHide={() => setHistory((pre) => pre.slice(0, 1))}
+            onHide={() => setHistory((pre) => pre.slice(0, 1))} // handle reset to first page
         >
             {children}
         </Tippy>

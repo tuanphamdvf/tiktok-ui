@@ -6,7 +6,6 @@
     overflow: auto;
 }
 .LIVE {
-    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
 }
 
 .btn-login {
@@ -16,6 +15,8 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    margin-top: 8px;
 }
 .text-login {
     color: rgba(22, 24, 35, 0.5);
@@ -25,7 +26,29 @@
 .suggested-accounts {
     padding: 16px 0px;
     width: 340px;
-    height: 320px;
+
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid rgba(22, 24, 35, 0.12);
+}
+.title-accounts {
+    padding: 0 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.seeall-accounts {
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+}
+.discover {
+    margin: 8px;
 }

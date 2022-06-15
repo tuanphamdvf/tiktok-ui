@@ -13,6 +13,8 @@
         "@tippyjs/react": "^4.2.6",
         "axios": "^0.27.2",
         "classnames": "^2.3.1",
+        "express": "^4.18.1",
+        "mongoose": "^6.3.6",
         "normalize.css": "^8.0.1",
         "react": "^18.1.0",
         "react-dom": "^18.1.0",
