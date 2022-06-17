@@ -1,9 +1,12 @@
 .wrapper {
-    width: 348px;
     display: flex;
     flex-direction: column;
     padding: 20px 0px 26px 8px;
     overflow: auto;
+
+    width: 356px;
+    padding: 20px 0 26px 8px;
+    margin-left: -18px;
 }
 .LIVE {
 }

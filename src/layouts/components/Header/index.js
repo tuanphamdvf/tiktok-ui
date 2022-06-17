@@ -10,16 +10,16 @@ import { faQuestionCircle, faKeyboard, faUser, faGrinHearts } from '@fortawesome
 
 import Styles from './Header.module.scss';
 import classNames from 'classnames/bind';
-import Button from '~/components/Button';
+import Button from '~/components/Button/Button';
 import images from '~/assets/images';
 
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 import Menu from '~/components/Popper/Menu';
-import { MessIcon, InboxIcon } from '~/components/Icon';
+import { MessIcon, InboxIcon } from '~/components/Icon/icon';
 import Image from '~/components/Image';
-import Search from '~/layouts/components/Search';
+import Search from '~/layouts/components/Search/Search';
 import { Link } from 'react-router-dom';
 import routesConfig from '~/config/routes';
 

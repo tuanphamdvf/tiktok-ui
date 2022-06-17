@@ -1,12 +1,19 @@
 import classNames from 'classnames/bind';
 import Styles from './Sidebar.module.scss';
-import Button from '~/components/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import { faHouse, faUserGroup, faVideo } from '@fortawesome/free-solid-svg-icons';
-import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button/Button';
+import AccountItem from '~/components/AccountItem/AccounItem';
 import { useState, useEffect } from 'react';
+import Menu, { MenuItem } from './Menu';
+import config from '~/config';
 
+import {
+    ActiveHomeIcon,
+    ActiveLiveIcon,
+    ActiveUseGroupIcon,
+    HomeIcon,
+    LiveIcon,
+    UserGroupIcon,
+} from '~/components/Icon/icon';
 const cx = classNames.bind(Styles);
 
 const apiUser = 'https://tiktok.fullstack.edu.vn/api/users/search?q=n&type=less';
@@ -29,22 +36,16 @@ function Sidebar() {
 
     return (
         <aside className={cx('wrapper')}>
-            <div className={cx('foryou-sidebar')}>
-                <Button menuSidebar leftIcon={<FontAwesomeIcon icon={faHouse} />}>
-                    For You
-                </Button>
-            </div>
-            <div className={cx('following-sidebar')}>
-                <Button menuSidebar leftIcon={<FontAwesomeIcon icon={faUserGroup} />}>
-                    Following
-                </Button>
-            </div>
-            <div className={cx('LIVE')}>
-                <Button menuSidebar leftIcon={<FontAwesomeIcon icon={faVideo} />}>
-                    LIVE
-                </Button>
-            </div>
-
+            <Menu>
+                <MenuItem title="For You" to={config.routes.home} icon={<HomeIcon />} activeIcon={<ActiveHomeIcon />} />
+                <MenuItem
+                    title="Following"
+                    to={config.routes.following}
+                    icon={<UserGroupIcon />}
+                    activeIcon={<ActiveUseGroupIcon />}
+                />
+                <MenuItem title="LIVE" to={config.routes.live} icon={<LiveIcon />} activeIcon={<ActiveLiveIcon />} />
+            </Menu>
             <div className={cx('btn-login')}>
                 <p className={cx('text-login')}>Log in to follow creators, like videos, and view comments.</p>
 
