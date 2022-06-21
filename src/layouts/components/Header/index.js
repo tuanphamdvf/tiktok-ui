@@ -22,9 +22,10 @@ import Image from '~/components/Image';
 import Search from '~/layouts/components/Search/Search';
 import { Link } from 'react-router-dom';
 import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(Styles);
-let currentUser = true;
+let currentUser = false;
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarth} />,
@@ -95,7 +96,7 @@ function Header() {
                 </div>
                 <Search />
                 <div className={cx('actions')}>
-                    <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                    <Button to={config.routes.project} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                         Upload
                     </Button>
                     {currentUser ? (
@@ -113,7 +114,9 @@ function Header() {
                             </Tippy>
                         </>
                     ) : (
-                        <Button primary>Log in</Button>
+                        <Button primary to={config.routes.project}>
+                            Log in
+                        </Button>
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (

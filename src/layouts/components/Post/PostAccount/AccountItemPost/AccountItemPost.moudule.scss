@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    // align-items: center;
+    padding: 6px 16px;
+}
+.avata {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.info {
+    display: flex;
+    margin-left: 12px;
+}
+.name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.usetname {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    line-height: 28px;
+}
+
+.check {
+    margin-left: 6px;
+
+    color: rgb(32, 213, 236);
+}
+.bio {
+    font-weight: 400;
+}

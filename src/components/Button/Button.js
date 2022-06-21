@@ -23,6 +23,7 @@ function Button({
     menuItem,
     menuSidebar,
     loginSidebar,
+    followOutline,
 
     ...passProps
 }) {
@@ -57,6 +58,7 @@ function Button({
         menuItem,
         menuSidebar,
         loginSidebar,
+        followOutline,
     });
     return (
         <Comp className={classes} {...props}>

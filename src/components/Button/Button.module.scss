@@ -5,7 +5,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     font-family: var(--font-family);
-    min-width: 100px;
+    // min-width: 100px;
     padding: 9px 16px;
     border-radius: 4px;
     cursor: pointer;
@@ -125,6 +125,20 @@
     margin-top: 20px;
     padding: 6px 8px;
     &:hover {
+        background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+.followOutline {
+    color: var(--primary);
+    border-color: currentColor;
+    width: 88px;
+    height: 28px;
+    box-sizing: border-box;
+    font-weight: 600;
+    justify-content: center;
+
+    &:hover {
+        border-color: currentColor;
         background-color: rgba(254, 44, 85, 0.06);
     }
 }

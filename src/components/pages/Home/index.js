@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import Styles from './home.module.scss';
+import Post from '~/layouts/components/Post/Post';
 // import { useState } from 'react';
 
 const cx = classNames.bind(Styles);
@@ -18,6 +19,7 @@ function Home() {
     //     });
     return (
         <div style={{ height: 2000 }} className={cx('wrapper')}>
+            <Post />
             {/* <div>
                 {' '}
                 Home page
