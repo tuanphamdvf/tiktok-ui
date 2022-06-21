@@ -7,7 +7,7 @@ import * as searchServices from '~/apiServices/searchServices';
 import 'tippy.js/dist/tippy.css';
 import { useEffect, useState, useRef } from 'react';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import AccountItem from '~/components/AccountItem';
+import AccountItem from '~/components/AccountItem/AccounItem';
 import { useDebounce } from '~/hooks';
 const cx = classNames.bind(Styles);
 function Search() {

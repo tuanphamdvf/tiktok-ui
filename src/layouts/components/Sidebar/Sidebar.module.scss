@@ -1,10 +1,15 @@
 .wrapper {
-    width: 348px;
     display: flex;
     flex-direction: column;
     padding: 20px 0px 26px 8px;
     overflow: auto;
+
+    width: 356px;
+    height: 1200px;
+    padding: 20px 0 26px 8px;
+    margin-left: -18px;
 }
+
 .LIVE {
 }
 
@@ -49,6 +54,25 @@
     font-size: 14px;
     font-weight: 600;
 }
-.discover {
-    margin: 8px;
+.title-discover {
+    color: rgba(22, 24, 35, 0.75);
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 16px;
+}
+.about {
+    position: relative;
+    padding-top: 16px;
+    padding-left: 8px;
+}
+.footer-year {
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17px;
+    display: inline-block;
+    margin-right: 6px;
+    margin-top: 5px;
 }

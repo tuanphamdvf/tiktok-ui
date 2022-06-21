@@ -4,5 +4,7 @@ const routers = {
     profile: '/@:nickname',
     upload: '/upload',
     search: '/search',
+    live: '/live',
+    project: '/project',
 };
 export default routers;
