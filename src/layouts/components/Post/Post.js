@@ -1,15 +1,56 @@
-import Styles from './Post.module.scss';
-import classNames from 'classnames/bind';
-import HeadLessTippy from '@tippyjs/react/headless';
-
-import { PostAccount } from './PostAccount';
+import db from '~/firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import PostVideo from './Postvideo';
+import { useMemo } from 'react';
 
 function Post() {
+    const [videos, setVideos] = useState([]);
+
+    useEffect(() => {
+        onSnapshot(collection(db, 'videos'), (snapshot) =>
+            setVideos(
+                snapshot.docs.map((doc) => ({
+                    ...doc.data(),
+                    id: doc.id,
+                })),
+            ),
+        );
+    }, []);
+    console.log(collection);
     return (
-        <div>
-            <PostAccount />
+        <div
+            id="focus"
+            tabIndex="1"
+            className="flex flex-col items-center snap-y snap-mandatory overflow-scroll h-screen overflow-x-hidden"
+        >
+            {videos.map((video) => (
+                <PostVideo key={video.nickname} data={video} />
+            ))}
         </div>
     );
 }
+
+export const useElementOnScreen = (options, targetRef) => {
+    const [isVisibile, setIsVisible] = useState();
+    const callbackFunction = (entries) => {
+        const [entry] = entries; //const entry = entries[0]
+        setIsVisible(entry.isIntersecting);
+    };
+    const optionsMemo = useMemo(() => {
+        return options;
+    }, [options]);
+    useEffect(() => {
+        const observer = new IntersectionObserver(callbackFunction, optionsMemo);
+        const currentTarget = targetRef.current;
+        if (currentTarget) observer.observe(currentTarget);
+
+        return () => {
+            if (currentTarget) observer.unobserve(currentTarget);
+        };
+    }, [targetRef, optionsMemo]);
+    return isVisibile;
+};
 
 export default Post;

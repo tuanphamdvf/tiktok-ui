@@ -10,6 +10,9 @@
     border-radius: 12px;
     margin-right: 8px;
     cursor: pointer;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
 }
 .wrapper {
     display: flex;

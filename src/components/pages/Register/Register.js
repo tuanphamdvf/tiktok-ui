@@ -1,30 +1,46 @@
 import classNames from 'classnames/bind';
 import styles from './Register.module.scss';
 import { useState } from 'react';
+import Button from '~/components/Button/Button';
+import config from '~/config';
 // import axios from 'axios';
-// import { response } from 'express';
+import { useNavigate } from 'react-router-dom';
 function Register() {
-    // const [user, setUser] = useState({
-    //     fullname: '',
-    //     email: '',
-    //     password: '',
-    //     rePassword: '',
-    // });
-    // const handleChange = (e) => {
-    //     const { name, value } = e.target;
-    //     setUser({ ...user, [name]: value });
-    // };
-    // axios.post('http://localhost:4000/app/signup', user).then(response);
+    const navigate = useNavigate();
+    const [user, setUser] = useState({
+        fullname: '',
+        email: '',
+        password: '',
+        rePassword: '',
+    });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUser({ ...user, [name]: value });
+    };
+    const register = () => {
+        navigate('/login');
+        // const { name, email, password, rePassword } = user;
+        // if (name && email && password && password === rePassword) {
+        //     axios.post('http://localhost:4000/register', user).then((res) => {
+        //         alert(res.data.message);
+        //         navigate.push('/login');
+        //     });
+        // } else {
+        //     alert('Please try agian !!');
+        // }
+    };
     const cx = classNames.bind(styles);
     return (
         <div className={cx('main')}>
-            {/* <form action="" method="POST" className={cx('form')} id="form-1">
+            <form action="" method="POST" className={cx('form')} id="form-1">
                 <h3 className={cx('heading')}>Sign up for TikTok</h3>
 
                 <div className={cx('spacer')}></div>
 
                 <div className={cx('form-group')}>
-                    <label htmlFor="fullname" className={cx('form-label')}></label>
+                    <label htmlFor="fullname" className={cx('form-label')}>
+                        My Name{' '}
+                    </label>
                     <input
                         onChange={handleChange}
                         value={user.fullname}
@@ -70,15 +86,15 @@ function Register() {
                 </div>
 
                 <div className={cx('form-group')}>
-                    <label htmlFor="password_confirmation" className={cx('form-label')}>
+                    <label htmlFor="rePassword" className={cx('form-label')}>
                         Confirm Password
                     </label>
 
                     <input
                         onChange={handleChange}
                         value={user.rePassword}
-                        id="password_confirmation"
-                        name="password_confirmation"
+                        id="rePassword"
+                        name="rePassword"
                         placeholder=""
                         type="password"
                         className={cx('form-control')}
@@ -90,12 +106,20 @@ function Register() {
                     promotions, recommendations, and account updates sent to your email
                 </div>
 
-                <button className={cx('form-submit')}>Sign Up</button>
+                <Button onClick={register} largeRed to={config.routes.login}>
+                    Sign Up
+                </Button>
                 <p className={cx('description')}>
                     By continuing, you agree to TikTok’s Terms of Service and confirm that you have read TikTok’s
                     Privacy Policy.
                 </p>
-            </form> */}
+                <div className={cx('wrapper-signup')}>
+                    <p className={cx('conten-signup')}></p> Already have an account?
+                    <Button smallRed to={config.routes.login}>
+                        Log In
+                    </Button>
+                </div>
+            </form>
         </div>
     );
 }

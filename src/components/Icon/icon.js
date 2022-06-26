@@ -169,6 +169,7 @@ export const MusicIcon = ({ width = '1.6rem', height = '1.6rem', className }) =>
         ></path>
     </svg>
 );
+
 // export const Foryou = ({ width = '3.2rem', height = '3.2rem', className }) => (
 //     <svg
 //         className={className}

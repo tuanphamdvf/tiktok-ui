@@ -1,20 +1,18 @@
-.main {
-    background: #f1f1f1;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-}
+
 .form {
     width: 420px;
     min-height: 100px;
-
     padding: 32px 24px;
     text-align: center;
     background: #fff;
-    border-radius: 2px;
-    margin: 24px;
+
     align-self: center;
-    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+    box-shadow: 0 2px 5px 0 rgb(51 62 73 / 10%);
+    border-radius: 8px;
+    position:fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
 }
 .form .heading {
     font-size: 3.2rem;
@@ -96,9 +94,36 @@
 .spacer {
     margin-top: 36px;
 }
-.fogot-password {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    padding: 4px 0 0;
+.description {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 10px;
+    line-height: 15px;
+    width: 375px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.checkbox {
+    display: flex;
+    color: rgba(22, 24, 35, 0.75);
+
+    font-size: 12px;
+    line-height: 16px;
+    display: inline;
+}
+.checkbox-btn {
     cursor: pointer;
+}
+.wrapper-signup {
+    color: rgb(22, 24, 35);
+    height: 64px;
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 18px;
 }

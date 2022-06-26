@@ -24,8 +24,11 @@ import { Link } from 'react-router-dom';
 import routesConfig from '~/config/routes';
 import config from '~/config';
 
+//redux
+import { connect } from 'react-redux';
+
 const cx = classNames.bind(Styles);
-let currentUser = false;
+
 const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarth} />,
@@ -57,7 +60,10 @@ const MENU_ITEMS = [
     },
 ];
 
-function Header() {
+function Header(props) {
+    console.log(props);
+    let currentUser = props.statusUser.statusUser;
+
     const handleMenuChange = (menuItem) => {
         console.log(menuItem);
     };
@@ -96,7 +102,7 @@ function Header() {
                 </div>
                 <Search />
                 <div className={cx('actions')}>
-                    <Button to={config.routes.project} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                    <Button to={config.routes.login} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                         Upload
                     </Button>
                     {currentUser ? (
@@ -114,7 +120,7 @@ function Header() {
                             </Tippy>
                         </>
                     ) : (
-                        <Button primary to={config.routes.project}>
+                        <Button primary to={config.routes.login}>
                             Log in
                         </Button>
                     )}
@@ -136,4 +142,7 @@ function Header() {
         </header>
     );
 }
-export default Header;
+const mapStateToProps = (state) => {
+    return { statusUser: state.currentUser };
+};
+export default connect(mapStateToProps)(Header);

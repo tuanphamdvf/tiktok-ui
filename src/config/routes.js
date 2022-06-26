@@ -6,5 +6,7 @@ const routers = {
     search: '/search',
     live: '/live',
     project: '/project',
+    register: '/register',
+    login: '/login',
 };
 export default routers;

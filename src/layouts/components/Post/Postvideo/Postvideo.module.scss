@@ -1,0 +1,135 @@
+//
+
+.postvideo {
+    padding: 20px 0;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgba(22, 24, 35, 0.1);
+}
+
+.container {
+    width: 660px;
+    max-width: 692px;
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+  
+
+    position: relative;
+}
+.info {
+    display: flex;
+}
+.avata {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.title-idname {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 8px;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.title-nickname {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-block;
+    line-height: 28px;
+    margin-left: 8px;
+}
+.video {
+    height: 550px;
+    width: 300px;
+    margin-left: 64px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+////
+
+.content-tag {
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.content-muscic {
+    font-weight: 600;
+    margin-left: 10px;
+    font-size: 16px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.blog-container {
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    max-width: 692px;
+}
+//icon
+
+.container-icon {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 57%;
+}
+.contenicon {
+    color: rgba(22, 24, 35, 0.75);
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    font-weight: 600;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(22, 24, 35, 0.06);
+    margin-top: 8px;
+    font-size: 20px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.1);
+    }
+    
+}
+.like {
+}
+.cmt {
+}
+.share {
+}
+.wrapper-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.iconlike{
+    // color: var(--primary);
+    &.active{
+        color: var(--primary);
+    }
+}

@@ -5,7 +5,7 @@ import AccountItem from '~/components/AccountItem/AccounItem';
 import { useState, useEffect } from 'react';
 import Menu, { MenuItem } from './Menu';
 import config from '~/config';
-import PerfectScrollbar from 'react-perfect-scrollbar';
+import { connect } from 'react-redux';
 import {
     ActiveHomeIcon,
     ActiveLiveIcon,
@@ -20,7 +20,8 @@ const cx = classNames.bind(Styles);
 
 const apiUser = 'https://tiktok.fullstack.edu.vn/api/users/search?q=n&type=less';
 
-function Sidebar() {
+function Sidebar(props) {
+    let currentUser = props.statusUser.statusUser;
     const [account, SetAccount] = useState([]);
 
     const getData = function () {
@@ -37,7 +38,7 @@ function Sidebar() {
     }, []);
 
     return (
-        <PerfectScrollbar className={cx('scrollbar')}>
+        <div className={cx('scrollbar')}>
             <aside className={cx('wrapper')}>
                 <Menu>
                     <MenuItem
@@ -59,13 +60,17 @@ function Sidebar() {
                         activeIcon={<ActiveLiveIcon />}
                     />
                 </Menu>
-                <div className={cx('btn-login')}>
-                    <p className={cx('text-login')}>Log in to follow creators, like videos, and view comments.</p>
+                {!currentUser ? (
+                    <div className={cx('btn-login')}>
+                        <p className={cx('text-login')}>Log in to follow creators, like videos, and view comments.</p>
 
-                    <Button to={config.routes.project} loginSidebar>
-                        Log in
-                    </Button>
-                </div>
+                        <Button to={config.routes.login} loginSidebar>
+                            Log in
+                        </Button>
+                    </div>
+                ) : (
+                    <></>
+                )}
 
                 <div className={cx('suggested-accounts')}>
                     <p className={cx('title-accounts')}>Suggested accounts</p>
@@ -86,8 +91,10 @@ function Sidebar() {
                 </div>
                 <span className={cx('footer-year')}>© 2022 TikTok</span>
             </aside>
-        </PerfectScrollbar>
+        </div>
     );
 }
-
-export default Sidebar;
+const mapStateToProps = (state) => {
+    return { statusUser: state.currentUser };
+};
+export default connect(mapStateToProps)(Sidebar);
