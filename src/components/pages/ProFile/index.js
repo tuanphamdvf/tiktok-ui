@@ -1,5 +1,7 @@
+import Sidebar from '~/layouts/components/Sidebar';
+
 function Profile() {
-    return <h2>profile</h2>;
+    return <Sidebar />;
 }
 
 export default Profile;

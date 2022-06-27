@@ -3,7 +3,6 @@
     flex-direction: column;
     padding: 20px 0px 26px 8px;
     overflow: auto;
-
     width: 356px;
     height: 800px;
     padding: 20px 0 26px 8px;
@@ -32,7 +31,6 @@
 .suggested-accounts {
     padding: 16px 0px;
     width: 340px;
-
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid rgba(22, 24, 35, 0.12);
@@ -76,4 +74,34 @@
     display: inline-block;
     margin-right: 6px;
     margin-top: 5px;
+}
+
+//@700
+@media only screen and (max-width: 1072px) {
+    .title-accounts {
+        display: none;
+    }
+    .seeall-accounts {
+        display: none;
+    }
+    .discover {
+        display: none;
+    }
+    .about {
+        display: none;
+    }
+    .footer-year {
+        display: none;
+    }
+}
+@media only screen and( max-width: 1072px) {
+    .wrapper {
+        padding: 0 8px;
+        width: 72px;
+        border-right: 1px solid rgba(22, 24, 35, 0.12);
+        box-shadow: 0px 2px 8px rgb(0 0 0 / 6%);
+    }
+    .btn-login {
+        display: none;
+    }
 }
