@@ -1,0 +1,226 @@
+.videopreview {
+    width: 300px;
+    height: 550px;
+}
+.upload {
+    margin: 100px;
+}
+
+.body {
+    background-color: rgb(248, 248, 248);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    width: 1100px;
+    height: 882px;
+    box-shadow: rgb(0 0 0 / 6%) 0px 2px 8px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    padding: 24px 56px;
+    margin-top: 60px;
+}
+
+.header {
+    height: 66px;
+}
+.title-header {
+    line-height: 36px;
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    color: rgb(22, 24, 35);
+}
+.content-header {
+    font-size: 18px;
+    font-weight: 27px;
+    display: block;
+    color: rgba(22, 24, 35, 0.5);
+}
+.container {
+    display: flex;
+}
+.upload-item {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 130px;
+    box-shadow: aquamarine;
+    width: 260px;
+    height: 458px;
+    border: 2px dashed rgba(22, 24, 35, 0.2);
+    box-sizing: content-box;
+    border-radius: 8px;
+}
+.upload {
+    background-color: azure;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.footer {
+    width: 100%;
+    height: 400px;
+}
+
+.descirpt {
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+}
+.titlebox {
+    width: 100%;
+}
+.description {
+    margin: 0 24px;
+    width: 600px;
+}
+
+.title1 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: text;
+    width: 100%;
+    position: relative;
+    padding: 0px 80px 0px 16px;
+}
+
+.conten1 {
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+}
+.caption {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    cursor: text;
+    width: 100%;
+    position: relative;
+    padding: 0px 80px 0px 16px;
+}
+.captionwrapper {
+    min-height: 46px;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+.cover {
+    width: 84.2px;
+    height: 130px;
+    object-fit: cover;
+    background-color: rgba(22, 24, 35, 0.03);
+}
+.titlebox2 {
+    margin-top: 24px;
+    width: 100%;
+    height: 144px;
+    box-sizing: border-box;
+}
+.imgaepreview {
+    position: relative;
+    line-height: 0;
+    padding: 6px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    height: 100%;
+}
+.titlebox3 {
+    margin-top: 48px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.secrity {
+    width: 300px;
+    height: 36px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    cursor: pointer;
+}
+.secrity-check {
+}
+.checkbox1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.titlebox4 {
+    margin-top: 24px;
+}
+
+.checkbox-container {
+    margin-right: 32px;
+}
+.check-box {
+    margin-right: 16px;
+}
+.titlebox5 {
+    margin-top: 24px;
+}
+.button {
+    margin-top: 24px;
+    display: flex;
+}
+.button-dis {
+    box-sizing: border-box;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    background-clip: padding-box;
+    width: 50%;
+    height: 48px;
+    min-width: 72px;
+    padding-inline: 23px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(227, 227, 227);
+    margin-right: 32px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.button-pos {
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    background-clip: padding-box;
+    width: 50%;
+    height: 48px;
+    min-width: 72px;
+    padding-inline: 23px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(227, 227, 227);
+}

@@ -1,11 +1,10 @@
 const initState = {
     currentUser: {
-        statusUser:  true,
-     },
+        statusUser: true,
+    },
+};
 
-}
-
-const rootReducer = (state= initState, action)=>{
+const rootReducer = (state = initState, action) => {
     return state;
-}
-export default rootReducer
+};
+export default rootReducer;

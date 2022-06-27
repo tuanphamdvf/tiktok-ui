@@ -81,6 +81,15 @@ function Sidebar(props) {
 
                     <div className={cx('seeall-accounts')}>See all</div>
                 </div>
+                <div className={cx('suggested-accounts')}>
+                    <p className={cx('title-accounts')}>Following accounts</p>
+
+                    {account.map((data) => {
+                        return <AccountItem key={data.id} data={data} />;
+                    })}
+
+                    <div className={cx('seeall-accounts')}>See all</div>
+                </div>
                 <div className={cx('discover')}>
                     <div className={cx('title-discover')}>Discover</div>
                     <ListDiscover />

@@ -12,13 +12,12 @@
     max-width: 692px;
     position: relative;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
 .wrapper {
     display: flex;
     align-items: flex-start;
-  
 
     position: relative;
 }
@@ -114,7 +113,6 @@
     &:hover {
         background-color: rgba(22, 24, 35, 0.1);
     }
-    
 }
 .like {
 }
@@ -127,9 +125,14 @@
     flex-direction: column;
     justify-content: center;
 }
-.iconlike{
+.iconlike {
     // color: var(--primary);
-    &.active{
+    &.active {
         color: var(--primary);
+    }
+}
+@media only screen and (max-width: 1072px) {
+    .postvideo {
+        margin-left: 60px;
     }
 }

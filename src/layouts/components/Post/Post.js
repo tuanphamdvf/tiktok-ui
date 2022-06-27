@@ -26,7 +26,7 @@ function Post() {
             className="flex flex-col items-center snap-y snap-mandatory overflow-scroll h-screen overflow-x-hidden"
         >
             {videos.map((video) => (
-                <PostVideo key={video.nickname} data={video} />
+                <PostVideo key={video.nickName} data={video} />
             ))}
         </div>
     );

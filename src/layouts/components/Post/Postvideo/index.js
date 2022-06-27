@@ -38,10 +38,8 @@ const VideoInfo = ({ avatar, idName, nickName, music, content }) => {
     );
 };
 
-
 const VideoContent = ({ video, like, cmt, share }) => {
     //
-    
 
     const videoRef = useRef();
     const [playing, setPlaying] = useState(false);
@@ -73,18 +71,15 @@ const VideoContent = ({ video, like, cmt, share }) => {
                 setPlaying(false);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isVisibile]);
-
-    
-   
-
 
     return (
         <div className={cx('wrapper')}>
             <video ref={videoRef} onClick={handleVideo} className={cx('video')} src={video} loop />
             <div className={cx('container-icon')}>
                 <div className={cx('like', 'wrapper-icon')}>
-                    <div  className={cx('icon',)}> {<FontAwesomeIcon className={cx('iconlike')} icon={faHeart} />}</div>
+                    <div className={cx('icon')}> {<FontAwesomeIcon className={cx('iconlike')} icon={faHeart} />}</div>
                     <span className={cx('contenicon')}>{like}</span>
                 </div>
                 <div className={cx('Cmt', 'wrapper-icon')}>
@@ -92,7 +87,6 @@ const VideoContent = ({ video, like, cmt, share }) => {
                     <span className={cx('contenicon')}>{cmt}</span>
                 </div>
                 <div className={cx('Share', 'wrapper-icon')}>
-
                     <div className={cx('icon')}>{<FontAwesomeIcon icon={faShare} />}</div>
                     <span className={cx('contenicon')}>{share}</span>
                 </div>

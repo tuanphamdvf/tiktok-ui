@@ -1,5 +1,5 @@
 function Project() {
-    return <h2>profile</h2>;
+    return <></>;
 }
 
 export default Project;

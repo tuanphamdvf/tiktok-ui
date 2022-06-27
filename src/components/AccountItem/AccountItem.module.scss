@@ -31,3 +31,18 @@
 
     color: rgb(32, 213, 236);
 }
+@media only screen and (max-width: 1072px) {
+    .info {
+        display: none;
+    }
+
+    .check {
+        display: none;
+    }
+    .usetname {
+        display: none;
+    }
+    .wrapper {
+        padding: 8px;
+    }
+}

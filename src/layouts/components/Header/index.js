@@ -102,7 +102,7 @@ function Header(props) {
                 </div>
                 <Search />
                 <div className={cx('actions')}>
-                    <Button to={config.routes.login} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                    <Button to={config.routes.upload} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                         Upload
                     </Button>
                     {currentUser ? (
