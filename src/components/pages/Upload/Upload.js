@@ -64,6 +64,10 @@ function Upload() {
                             <div className={cx('titlebox5')}>
                                 {' '}
                                 <span className={cx('descirpt')}> Run a copyright check</span>
+                                <label className={cx('toggle')} htmlFor="toggle">
+                                    <input type="checkbox" id="toggle" />
+                                    <div className={cx('slider')}></div>
+                                </label>
                             </div>
                             <div className={cx('titlebox')}>
                                 <span className={cx('conten1')}>

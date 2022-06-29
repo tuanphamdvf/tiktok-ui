@@ -16,3 +16,8 @@
     background-color: #ccc;
     min-height: 1000px;
 }
+@media only screen and (max-width: 450px) {
+    .container {
+        padding: 0;
+    }
+}

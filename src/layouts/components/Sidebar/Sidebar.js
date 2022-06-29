@@ -94,7 +94,7 @@ function Sidebar(props) {
                     <div className={cx('title-discover')}>Discover</div>
                     <ListDiscover />
                 </div>
-
+                <div className={cx('space')}></div>
                 <div className={cx('about')}>
                     <FooterSideBar />
                 </div>

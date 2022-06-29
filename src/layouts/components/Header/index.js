@@ -1,3 +1,19 @@
+import Styles from './Header.module.scss';
+import classNames from 'classnames/bind';
+import Button from '~/components/Button/Button';
+import images from '~/assets/images';
+import Menu from '~/components/Popper/Menu';
+import Image from '~/components/Image';
+import Search from '~/layouts/components/Search/Search';
+import { Link } from 'react-router-dom';
+import routesConfig from '~/config/routes';
+import config from '~/config';
+
+//redux
+import { connect } from 'react-redux';
+
+//icon
+import { MessIcon, InboxIcon } from '~/components/Icon/icon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faEllipsisVertical,
@@ -8,24 +24,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle, faKeyboard, faUser, faGrinHearts } from '@fortawesome/free-regular-svg-icons';
 
-import Styles from './Header.module.scss';
-import classNames from 'classnames/bind';
-import Button from '~/components/Button/Button';
-import images from '~/assets/images';
-
+//tippy
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-
-import Menu from '~/components/Popper/Menu';
-import { MessIcon, InboxIcon } from '~/components/Icon/icon';
-import Image from '~/components/Image';
-import Search from '~/layouts/components/Search/Search';
-import { Link } from 'react-router-dom';
-import routesConfig from '~/config/routes';
-import config from '~/config';
-
-//redux
-import { connect } from 'react-redux';
 
 const cx = classNames.bind(Styles);
 
@@ -102,9 +103,12 @@ function Header(props) {
                 </div>
                 <Search />
                 <div className={cx('actions')}>
-                    <Button to={config.routes.upload} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-                        Upload
-                    </Button>
+                    <div className={cx('upLoad')}>
+                        {' '}
+                        <Button to={config.routes.upload} text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                            Upload
+                        </Button>
+                    </div>
                     {currentUser ? (
                         <>
                             <Tippy content="Inbox" placement="bottom">

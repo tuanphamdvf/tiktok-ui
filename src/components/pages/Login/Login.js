@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Button from '~/components/Button/Button';
 import config from '~/config';
 import { useNavigate } from 'react-router-dom';
+
 function Login() {
     const navigate = useNavigate();
     const cx = classNames.bind(styles);
@@ -20,7 +21,6 @@ function Login() {
     };
     return (
         <div className={cx('main')}>
-            
             <form action="" method="POST" className={cx('form')} id="form-2">
                 <h3 className={cx('heading')}>Log in to TikTok</h3>
 

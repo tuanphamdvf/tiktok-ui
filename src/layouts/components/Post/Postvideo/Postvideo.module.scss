@@ -8,21 +8,23 @@
 }
 
 .container {
-    width: 660px;
+    width: 692px;
     max-width: 692px;
     position: relative;
-    display: flex;
-    justify-content: space-between;
 }
-
+.btn-fl {
+    top: 8px;
+    right: 0;
+    position: absolute;
+}
 .wrapper {
     display: flex;
     align-items: flex-start;
-
     position: relative;
 }
 .info {
     display: flex;
+    position: relative;
 }
 .avata {
     width: 56px;
@@ -135,4 +137,83 @@
     .postvideo {
         margin-left: 60px;
     }
+    .wrapper {
+        width: calc(100vw - 32px - 68px);
+    }
+    .container {
+        width: calc(100vw - 32px - 68px);
+    }
+    .video {
+        position: relative;
+    }
+    .container-icon {
+        left: 380px;
+    }
+}
+
+///responsive
+@media only screen and (max-width: 450px) {
+    .postvideo {
+        margin-left: 16px;
+    }
+    .video {
+        margin: 0 16px;
+        width: 280px;
+        height: 450px;
+    }
+    .container-icon {
+        left: 100%;
+    }
+    .btn-fl {
+        position: absolute;
+        right: -72px;
+    }
+}
+
+///backtotop
+#button {
+    display: inline-block;
+    background-color: #ff9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+    content: '\f077';
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+    width: 77%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
 }

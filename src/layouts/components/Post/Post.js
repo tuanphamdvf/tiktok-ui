@@ -20,13 +20,9 @@ function Post() {
     }, []);
     console.log(collection);
     return (
-        <div
-            id="focus"
-            tabIndex="1"
-            className="flex flex-col items-center snap-y snap-mandatory overflow-scroll h-screen overflow-x-hidden"
-        >
+        <div id="focus" tabIndex="1">
             {videos.map((video) => (
-                <PostVideo key={video.nickName} data={video} />
+                <PostVideo key={video.id} data={video} />
             ))}
         </div>
     );

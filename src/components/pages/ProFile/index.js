@@ -1,7 +1,5 @@
-import Sidebar from '~/layouts/components/Sidebar';
-
 function Profile() {
-    return <Sidebar />;
+    return <h2>tuan</h2>;
 }
 
 export default Profile;
