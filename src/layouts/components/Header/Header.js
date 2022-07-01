@@ -30,7 +30,10 @@ import { faQuestionCircle, faKeyboard, faUser, faGrinHearts } from '@fortawesome
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { MenuL } from '~/components/Popper/Menul';
+<<<<<<< HEAD
 import { BackToTop } from '../BackToTop';
+=======
+>>>>>>> ddca8f464dd341e4be5ffc26e6549888b081a9b8
 
 const cx = classNames.bind(Styles);
 
@@ -107,6 +110,7 @@ function Header() {
             separate: true,
         },
     ];
+<<<<<<< HEAD
     const scrollToTop = (e) => {
         e.preventDefault();
         window.scrollTo({
@@ -118,6 +122,13 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')} onClick={scrollToTop}>
+=======
+
+    return (
+        <header className={cx('wrapper')}>
+            <div className={cx('inner')}>
+                <div className={cx('logo')}>
+>>>>>>> ddca8f464dd341e4be5ffc26e6549888b081a9b8
                     <Link to={routesConfig.home} className={cx('logo-link')}>
                         <img src={images.logo} alt="TikTok"></img>
                     </Link>
@@ -170,7 +181,10 @@ function Header() {
                     )}
                 </div>
             </div>
+<<<<<<< HEAD
             <BackToTop />
+=======
+>>>>>>> ddca8f464dd341e4be5ffc26e6549888b081a9b8
         </header>
     );
 }
