@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    display: flex;
+    width: var(--default-layout-width);
+    padding: 0 var(--default-layout-horizoltal-spacer);
+    margin-top: var(--default-layout-header-height);
+    max-width: 100%;
+    justify-content: space-between;
+}
+.content {
+    flex: 1;
+    background-color: #ccc;
+    min-height: 1000px;
+}
+@media only screen and (max-width: 450px) {
+    .container {
+        padding: 0;
+    }
+}

@@ -5,7 +5,9 @@ import AccountItem from '~/components/AccountItem/AccounItem';
 import { useState, useEffect } from 'react';
 import Menu, { MenuItem } from './Menu';
 import config from '~/config';
-import { connect } from 'react-redux';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '~/firebase';
+//icon
 import {
     ActiveHomeIcon,
     ActiveLiveIcon,
@@ -20,10 +22,12 @@ const cx = classNames.bind(Styles);
 
 const apiUser = 'https://tiktok.fullstack.edu.vn/api/users/search?q=n&type=less';
 
-function Sidebar(props) {
-    let currentUser = props.statusUser.statusUser;
+function Sidebar() {
     const [account, SetAccount] = useState([]);
-
+    const [user, setUser] = useState({});
+    onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+    });
     const getData = function () {
         fetch(apiUser)
             .then(function (res) {
@@ -60,7 +64,7 @@ function Sidebar(props) {
                         activeIcon={<ActiveLiveIcon />}
                     />
                 </Menu>
-                {!currentUser ? (
+                {!user ? (
                     <div className={cx('btn-login')}>
                         <p className={cx('text-login')}>Log in to follow creators, like videos, and view comments.</p>
 
@@ -103,7 +107,4 @@ function Sidebar(props) {
         </div>
     );
 }
-const mapStateToProps = (state) => {
-    return { statusUser: state.currentUser };
-};
-export default connect(mapStateToProps)(Sidebar);
+export default Sidebar;
