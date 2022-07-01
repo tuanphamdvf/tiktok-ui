@@ -3,24 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from '~/App';
 
-import { Provider } from 'react-redux';
-import { legacy_createStore as createStore } from 'redux';
-import rootReducer from './store/reducers/rootReducer';
-
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './components/GlobalStyles/GlobalStyles';
-
-const reduxStore = createStore(rootReducer);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
         <GlobalStyles>
-            <Provider store={reduxStore}>
-                {' '}
-                <App />
-            </Provider>
+            <App />
         </GlobalStyles>
     </React.StrictMode>,
 );

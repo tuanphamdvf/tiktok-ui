@@ -20,18 +20,6 @@ function Home() {
     return (
         <div style={{ height: 2000 }} className={cx('wrapper')}>
             <Post />
-            {/* <div>
-                {' '}
-                Home page
-                {postData.map((post) => {
-                    return (
-                        <div className={cx('container')}>
-                            <h2 className={cx('title')}>{post.title}</h2>
-                            <p className={cx('post')}> {post.body}</p>
-                        </div>
-                    );
-                })}
-            </div> */}
         </div>
     );
 }

@@ -18,7 +18,7 @@ function Post() {
             ),
         );
     }, []);
-    console.log(collection);
+
     return (
         <div id="focus" tabIndex="1">
             {videos.map((video) => (

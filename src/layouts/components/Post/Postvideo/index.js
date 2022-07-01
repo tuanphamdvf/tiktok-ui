@@ -115,13 +115,10 @@ const VideoContent = ({ video, like, cmt, share }) => {
     );
 };
 const PostVideo = ({ data }) => {
-    console.log(data);
-
     return (
         <div className={cx('postvideo')}>
             <VideoInfo {...data} />
             <VideoContent {...data} />
-            {console.log(data)}
         </div>
     );
 };

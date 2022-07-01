@@ -5,6 +5,9 @@ import Button from '~/components/Button/Button';
 import config from '~/config';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '~/firebase';
+
 function Register() {
     const navigate = useNavigate();
     const [user, setUser] = useState({
@@ -17,22 +20,30 @@ function Register() {
         const { name, value } = e.target;
         setUser({ ...user, [name]: value });
     };
-    const register = () => {
-        navigate('/login');
-        // const { name, email, password, rePassword } = user;
-        // if (name && email && password && password === rePassword) {
-        //     axios.post('http://localhost:4000/register', user).then((res) => {
-        //         alert(res.data.message);
-        //         navigate.push('/login');
-        //     });
-        // } else {
-        //     alert('Please try agian !!');
-        // }
+
+    const registerHandle = (e) => {
+        e.preventDefault();
+        console.log(user);
+
+        createUserWithEmailAndPassword(auth, user.email, user.password)
+            .then((res) => {
+                alert('Registered successfully, now log in');
+                navigate('/login');
+            })
+            .catch((err) => alert('TRY AGAIN, ERROR '));
     };
+    //     axios.post('http://localhost:4000/register', user).then((res) => {
+    //         alert(res.data.message);
+    //         navigate.push('/login');
+    //     });
+    // } else {
+    //     alert('Please try agian !!');
+    // }
+
     const cx = classNames.bind(styles);
     return (
         <div className={cx('main')}>
-            <form action="" method="POST" className={cx('form')} id="form-1">
+            <form action="" className={cx('form')} id="form-1">
                 <h3 className={cx('heading')}>Sign up for TikTok</h3>
 
                 <div className={cx('spacer')}></div>
@@ -85,7 +96,7 @@ function Register() {
                     <span className={cx('form-message')}></span>
                 </div>
 
-                <div className={cx('form-group')}>
+                {/* <div className={cx('form-group')}>
                     <label htmlFor="rePassword" className={cx('form-label')}>
                         Confirm Password
                     </label>
@@ -100,13 +111,13 @@ function Register() {
                         className={cx('form-control')}
                     />
                     <span className={cx('form-message')}></span>
-                </div>
+                </div> */}
                 <div className={cx('checkbox')}>
                     <input type={'checkbox'} className={cx('checkbox-btn')} /> Get trending content, newsletters,
                     promotions, recommendations, and account updates sent to your email
                 </div>
 
-                <Button onClick={register} largeRed to={config.routes.login}>
+                <Button onClick={registerHandle} largeRed to={config.routes.login}>
                     Sign Up
                 </Button>
                 <p className={cx('description')}>

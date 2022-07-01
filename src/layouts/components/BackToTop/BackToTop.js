@@ -1,28 +1,44 @@
-import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Styles from './BackToTop.module.scss';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
+import Styles from './BackToTop.module.scss';
 
-function BackToTop() {
-    var btn = document.querySelector('#button');
+import { BackToTopIcon } from '~/components/Icon/icon';
 
-    window.scroll(function () {
-        if (window.scrollTop() > 300) {
-            btn.addClass('show');
-        } else {
-            btn.removeClass('show');
-        }
-    });
-    btn.on('click', function (e) {
-        e.preventDefault();
-        'html, body'.animate({ scrollTop: 0 }, '300');
-    });
+function ScrollToTop() {
     const cx = classNames.bind(Styles);
+    const [isVisibile, setIsVisible] = useState(false);
+    // const btn = document.querySelector('.wrapper');
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 5) {
+            setIsVisible(true);
+            // btn.classList.add('onanimation');
+        } else {
+            setIsVisible(false);
+            // btn.classList.add('hide');
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', toggleVisibility);
+    }, []);
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
-        <button id="button" className={cx('button')}>
-            <FontAwesomeIcon icon={faChevronCircleUp} />
-        </button>
+        <div className={cx('wrapper')}>
+            <div className={cx('getapp')}>Get App</div>
+            {isVisibile && (
+                <button onClick={scrollToTop} className={cx('button')}>
+                    {<BackToTopIcon />}
+                </button>
+            )}
+        </div>
     );
 }
 
-export default BackToTop;
+export default ScrollToTop;
