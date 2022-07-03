@@ -3,8 +3,8 @@ import Styles from './PostAccount.module.scss';
 
 import { useState, useEffect } from 'react';
 import Button from '~/components/Button/Button';
-import HashTag from '../../Sidebar/ListDiscover/HashTag';
-import MusicHashTag from '../../Sidebar/ListDiscover/MusicHashtag';
+import HashTag from '../../../layouts/components/Sidebar/ListDiscover/HashTag';
+import MusicHashTag from '../../../layouts/components/Sidebar/ListDiscover/MusicHashtag';
 import { AccountItemPost } from './AccountItemPost';
 
 const apiUser = 'https://tiktok.fullstack.edu.vn/api/users/search?q=a&type=less';

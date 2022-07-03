@@ -1,12 +1,13 @@
 const routers = {
     home: '/',
     following: '/following',
-    profile: '/@:nickname',
+    profile: '/profile',
     upload: '/upload',
     search: '/search',
     live: '/live',
-    project: '/project',
+    project: '/nickname',
     register: '/register',
     login: '/login',
+    coin: '/coin',
 };
 export default routers;

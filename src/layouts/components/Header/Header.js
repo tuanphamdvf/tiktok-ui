@@ -30,10 +30,7 @@ import { faQuestionCircle, faKeyboard, faUser, faGrinHearts } from '@fortawesome
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { MenuL } from '~/components/Popper/Menul';
-<<<<<<< HEAD
 import { BackToTop } from '../BackToTop';
-=======
->>>>>>> ddca8f464dd341e4be5ffc26e6549888b081a9b8
 
 const cx = classNames.bind(Styles);
 
@@ -60,7 +57,7 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faQuestionCircle} />,
         title: 'Feedback and help',
-        to: 'feedback',
+        to: '/feedback',
     },
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,
@@ -90,7 +87,7 @@ function Header() {
         {
             icon: <FontAwesomeIcon icon={faUser} />,
             title: 'View Profile',
-            to: '/@hoaa',
+            to: routesConfig.profile,
         },
         {
             icon: <FontAwesomeIcon icon={faCoins} />,
@@ -110,7 +107,6 @@ function Header() {
             separate: true,
         },
     ];
-<<<<<<< HEAD
     const scrollToTop = (e) => {
         e.preventDefault();
         window.scrollTo({
@@ -122,13 +118,6 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')} onClick={scrollToTop}>
-=======
-
-    return (
-        <header className={cx('wrapper')}>
-            <div className={cx('inner')}>
-                <div className={cx('logo')}>
->>>>>>> ddca8f464dd341e4be5ffc26e6549888b081a9b8
                     <Link to={routesConfig.home} className={cx('logo-link')}>
                         <img src={images.logo} alt="TikTok"></img>
                     </Link>
@@ -167,9 +156,9 @@ function Header() {
                     {user ? (
                         <Menu items={userMenu} onChange={handleMenuChange}>
                             <Image
-                                src="https://i.ex-cdn.com/60giay.com/files/content/2022/01/03/img_5209-1437.jpg"
+                                src="https://firebasestorage.googleapis.com/v0/b/tiktok-3bce6.appspot.com/o/avatatDefault.png?alt=media&token=79268b74-eb45-4557-8bb1-dfdd1d6b0757"
                                 className={cx('user-avatar')}
-                                alt="phuonguyen"
+                                alt={user.email}
                             />
                         </Menu>
                     ) : (
@@ -181,10 +170,7 @@ function Header() {
                     )}
                 </div>
             </div>
-<<<<<<< HEAD
             <BackToTop />
-=======
->>>>>>> ddca8f464dd341e4be5ffc26e6549888b081a9b8
         </header>
     );
 }

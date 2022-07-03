@@ -4,6 +4,7 @@ import Button from '~/components/Button/Button';
 import AccountItem from '~/components/AccountItem/AccounItem';
 import { useState, useEffect } from 'react';
 import Menu, { MenuItem } from './Menu';
+import routesConfig from '~/config/routes';
 import config from '~/config';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '~/firebase';
@@ -42,7 +43,7 @@ function Sidebar() {
     }, []);
 
     return (
-        <div className={cx('scrollbar')}>
+        <div>
             <aside className={cx('wrapper')}>
                 <Menu>
                     <MenuItem
@@ -53,16 +54,11 @@ function Sidebar() {
                     />
                     <MenuItem
                         title="Following"
-                        to={config.routes.following}
+                        to={routesConfig.following}
                         icon={<UserGroupIcon />}
                         activeIcon={<ActiveUseGroupIcon />}
                     />
-                    <MenuItem
-                        title="LIVE"
-                        to={config.routes.live}
-                        icon={<LiveIcon />}
-                        activeIcon={<ActiveLiveIcon />}
-                    />
+                    <MenuItem title="LIVE" to={routesConfig.live} icon={<LiveIcon />} activeIcon={<ActiveLiveIcon />} />
                 </Menu>
                 {!user ? (
                     <div className={cx('btn-login')}>
@@ -92,7 +88,7 @@ function Sidebar() {
                         return <AccountItem key={data.id} data={data} />;
                     })}
 
-                    <div className={cx('seeall-accounts')}>See all</div>
+                    <div className={cx('seeall-accounts')}>See more</div>
                 </div>
                 <div className={cx('discover')}>
                     <div className={cx('title-discover')}>Discover</div>

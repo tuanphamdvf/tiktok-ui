@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import Styles from './home.module.scss';
-import Post from '~/layouts/components/Post/Post';
+import { Post } from '~/layouts/components/Post';
 // import { useState } from 'react';
 
 const cx = classNames.bind(Styles);
