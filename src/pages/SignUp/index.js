@@ -5,7 +5,7 @@ import Button from '~/components/Button/Button';
 import config from '~/config';
 // import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth } from '~/firebase';
 
 function Register() {
@@ -16,6 +16,10 @@ function Register() {
         password: '',
         rePassword: '',
     });
+
+    const logout = async () => {
+        await signOut(auth);
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUser({ ...user, [name]: value });
@@ -29,6 +33,7 @@ function Register() {
             .then((res) => {
                 alert('Registered successfully, now log in');
                 navigate('/login');
+                logout();
             })
             .catch((err) => alert('TRY AGAIN, ERROR '));
     };

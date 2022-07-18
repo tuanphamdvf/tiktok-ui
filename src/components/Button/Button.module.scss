@@ -175,3 +175,15 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
+.smallBorder {
+    background: rgb(241, 241, 241);
+    display: block;
+    padding: 2px 8px;
+    margin-bottom: 12px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: all 300ms ease 0s;
+    font-size: 14px;
+    font-weight: 600;
+}

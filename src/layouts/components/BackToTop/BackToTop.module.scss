@@ -88,3 +88,64 @@
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
     }
 }
+.popup {
+    display: flex;
+    position: fixed;
+    inset: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.title-popup {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+.wrapper-popup {
+    margin-bottom: 0px;
+    min-width: 360px;
+    min-height: 500px;
+    padding: 40px 32px 32px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    border: 1px solid rgba(22, 24, 35, 0.03);
+    box-shadow: rgb(0 0 0 / 6%) 0px 2px 8px;
+    position: relative;
+}
+
+.img-popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-img {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 32px 0px 24px;
+    width: auto;
+    padding: 0px 24px;
+}
+.img {
+    width: 174px;
+    height: 174px;
+}
+.footer-popup {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+}
+.footer-img {
+    width: 142px;
+    height: 45px;
+    background-size: 138px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: 8px;
+}

@@ -1,6 +1,3 @@
-.scrollbar {
-}
-
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -11,6 +8,11 @@
     padding: 20px 0 26px 8px;
     position: fixed;
     margin-left: -18px;
+    overflow: hidden;
+
+    &:hover {
+        overflow-y: scroll;
+    }
 }
 
 .LIVE {
@@ -112,7 +114,7 @@
         display: none;
     }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 524px) {
     .scrollbar {
         display: none;
     }

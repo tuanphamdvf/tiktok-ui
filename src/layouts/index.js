@@ -3,3 +3,7 @@ export { default as HeaderOnly } from './HeaderOnly';
 export { default as LayoutFix } from './LayoutFix';
 export { default as Layout2 } from './Layout2';
 export { default as Layout3 } from './Layout3';
+export { default as SettingLayout } from './SettingLayout';
+export { default as HeaderOnly1 } from './HeaderOnly1';
+export { default as HeaderOnlyFeedback } from './HeaderOnlyFeedback';
+export { default as HeaderOnlyInbox } from './HeaderOnlyInbox';

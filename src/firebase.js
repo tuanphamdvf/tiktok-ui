@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
-
+import { getStorage, ref } from 'firebase/storage';
 const firebaseConfig = {
     apiKey: 'AIzaSyBoqnQMSsa9j4kCZ2ZdJDAO4rRTPtDD7zo',
     authDomain: 'tiktok-b977d.firebaseapp.com',
@@ -12,8 +12,12 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-
+const auth = getAuth(app);
+const storage = getStorage();
+const storageRef = ref(storage);
 const db = getFirestore(app);
+
 console.log('firestore connected');
-export const auth = getAuth(app);
+
+export { auth, storageRef };
 export default db;

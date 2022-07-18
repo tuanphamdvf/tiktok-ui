@@ -43,7 +43,8 @@ function Sidebar() {
     }, []);
 
     return (
-        <div>
+        /// responsive screen mobile
+        <div className={cx('scrollbar')}>
             <aside className={cx('wrapper')}>
                 <Menu>
                     <MenuItem

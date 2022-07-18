@@ -1,0 +1,236 @@
+.layout {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    margin: auto;
+    height: calc(100vh - 60px);
+    max-width: 1100px;
+    min-width: 1100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 16px;
+}
+.wrapper-delete {
+    position: relative;
+}
+.wrapper {
+    display: flex;
+    flex: 0 0 356px;
+    position: relative;
+}
+.wrapper-side {
+    display: flex;
+    width: 356px;
+    padding: 16px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden auto;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+}
+.wrapper-btn {
+    height: 52px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content {
+    font-size: 18px;
+    color: #161823;
+    font-weight: 600;
+    margin-left: 12px;
+}
+.icon {
+    font-size: 18px;
+}
+.wrapper-content {
+    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    flex: 0 0 728px;
+    box-sizing: border-box;
+    padding: 16px 24px 24px;
+    z-index: 1;
+}
+.title-account {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 8px 20px;
+    font-weight: 700;
+    color: #000;
+}
+.content-control {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #161823;
+    margin: 0 16px 12px;
+}
+.content-delete {
+    font-size: 16px;
+    line-height: 22px;
+    color: #161823;
+    margin: 0 16px;
+    padding-bottom: 16px;
+    border-bottom: solid;
+    border-width: 0.25px;
+}
+
+.content1 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 8px 20px;
+    font-weight: 700;
+    color: #000;
+}
+.content2 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #161823;
+    margin: 0 16px 12px;
+}
+.content3 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #161823;
+    margin: 0 16px;
+}
+.content4 {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(22, 24, 35, 0.5);
+    margin-right: 84px;
+    margin-left: 16px;
+    border-bottom: solid;
+    border-width: 0.25px;
+    padding-bottom: 16px;
+}
+.content5 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #161823;
+    margin: 0 16px;
+    border-bottom: solid;
+    border-width: 0.25px;
+    padding: 16px 0px;
+}
+.content6 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #161823;
+    margin: 0 16px 12px;
+
+    padding: 16px 0px;
+}
+.content7 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #161823;
+    margin-left: 16px;
+}
+.content8 {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(22, 24, 35, 0.5);
+    border-bottom: solid;
+    border-width: 0.25px;
+    padding: 16px 0px;
+    margin-left: 16px;
+}
+.content9 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 8px 20px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 16px;
+}
+.content10 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #161823;
+    margin: 0 16px 12px;
+}
+.content11 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #161823;
+    margin: 0 16px;
+}
+.content12 {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(22, 24, 35, 0.5);
+    margin-right: 84px;
+    margin-left: 16px;
+    border-bottom: solid;
+    border-width: 0.25px;
+    padding: 16px 0px;
+
+    margin-left: 16px;
+}
+.content13 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #161823;
+    margin: 0 16px 12px;
+}
+.content14 {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(22, 24, 35, 0.5);
+    margin-right: 84px;
+    margin-left: 16px;
+}
+.content15 {
+    font-size: 16px;
+    line-height: 22px;
+    color: #161823;
+    margin: 0 16px;
+}
+.content16 {
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(22, 24, 35, 0.5);
+    margin-right: 84px;
+    margin-left: 16px;
+    border-bottom: solid;
+    border-width: 0.25px;
+    padding: 16px 0px;
+    margin-left: 16px;
+}
+.delete {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0 16px;
+    color: #fe2c55;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    right: 0;
+}
+.wrapper-privacy {
+    margin-top: 16px;
+}

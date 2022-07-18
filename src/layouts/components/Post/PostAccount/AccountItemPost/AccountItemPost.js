@@ -3,7 +3,6 @@ import styles from './AccountItemPost.moudule.scss';
 import Image from '~/components/Image';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 function AccountItemPost({ data }) {

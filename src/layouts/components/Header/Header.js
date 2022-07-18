@@ -5,7 +5,7 @@ import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
 import Image from '~/components/Image';
 import Search from '~/layouts/components/Search/Search';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import routesConfig from '~/config/routes';
 import config from '~/config';
 import { useState } from 'react';
@@ -23,6 +23,11 @@ import {
     faEarth,
     faCoins,
     faArrowRightFromBracket,
+    faChevronCircleUp,
+    faChevronCircleDown,
+    faL,
+    faM,
+    faClose,
 } from '@fortawesome/free-solid-svg-icons';
 import { faQuestionCircle, faKeyboard, faUser, faGrinHearts } from '@fortawesome/free-regular-svg-icons';
 
@@ -31,6 +36,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { MenuL } from '~/components/Popper/Menul';
 import { BackToTop } from '../BackToTop';
+import { Messages } from '../Messages';
 
 const cx = classNames.bind(Styles);
 
@@ -49,7 +55,51 @@ const MENU_ITEMS = [
 
                 {
                     code: 'vi',
-                    title: 'Tiếng Việt ',
+                    title: 'Tiếng Việt (Việt Nam)  ',
+                },
+                {
+                    code: '02',
+                    title: ' العربية বাঙ্গালি (ভারত)  ',
+                },
+                {
+                    code: '01',
+                    title: '简体中文',
+                },
+                {
+                    code: '03',
+                    title: 'Cebuano (Pilipinas)  ',
+                },
+                {
+                    code: '04',
+                    title: ' Čeština ',
+                },
+                {
+                    code: '05',
+                    title: 'Deutsch Ελληνικά  ',
+                },
+                {
+                    code: '06',
+                    title: 'Italiano ',
+                },
+                {
+                    code: '07',
+                    title: 'Română (Romania) ',
+                },
+                {
+                    code: '08',
+                    title: 'Nederlands (Nederland) ',
+                },
+                {
+                    code: '09',
+                    title: 'Polski (Polska)  ',
+                },
+                {
+                    code: '10',
+                    title: 'Русский (Россия)  ',
+                },
+                {
+                    code: '11',
+                    title: 'Svenska (Sverige) ',
                 },
             ],
         },
@@ -62,13 +112,15 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faKeyboard} />,
         title: 'Keyboard shortcuts',
+        separate: false,
     },
 ];
 
 function Header() {
-    // let currentUser = props.statusUser.statusUser;
-
+    const [shortcut, setShortcut] = useState(false);
     const [user, setUser] = useState({});
+    const [showMess, setShowMess] = useState(false);
+
     onAuthStateChanged(auth, (currentUser) => {
         setUser(currentUser);
     });
@@ -76,13 +128,18 @@ function Header() {
     const logout = async () => {
         await signOut(auth);
     };
+    const navigate = useNavigate();
     const handleMenuChange = (menuItem) => {
         if (menuItem.title === 'Log out') {
             logout();
+        } else if (menuItem.title === 'Keyboard shortcuts') {
+            console.log(shortcut);
+            setShortcut(true);
         } else {
             console.log(menuItem);
         }
     };
+
     const userMenu = [
         {
             icon: <FontAwesomeIcon icon={faUser} />,
@@ -136,13 +193,14 @@ function Header() {
                     {user ? (
                         <>
                             <Tippy content="Inbox" placement="bottom">
-                                <button className={cx('action-btn')}>
+                                <button onClick={() => navigate('/inbox')} className={cx('action-btn')}>
                                     <MessIcon />
                                 </button>
                             </Tippy>
+                            {showMess && <Messages />}
 
                             <Tippy content="Messgae" placement="bottom">
-                                <button className={cx('action-btn')}>
+                                <button onClick={() => setShowMess(!showMess)} className={cx('action-btn')}>
                                     <InboxIcon />
                                 </button>
                             </Tippy>
@@ -171,6 +229,37 @@ function Header() {
                 </div>
             </div>
             <BackToTop />
+            {shortcut && (
+                <div className={cx('shortcut')}>
+                    <div className={cx('wrapper-shortcut')}>
+                        <div className={cx('title-shortcut')}>Keyboard shortcuts</div>
+                        <div className={cx('content-shortcut')}>
+                            <div>Go to previous video</div>
+                            <FontAwesomeIcon icon={faChevronCircleUp} />
+                        </div>
+                        <div className={cx('content-shortcut')}>
+                            <div>Go to next video</div>
+                            <FontAwesomeIcon icon={faChevronCircleDown} />
+                        </div>
+                        <div className={cx('content-shortcut')}>
+                            <div>Like video</div>
+                            <FontAwesomeIcon icon={faL} />
+                        </div>
+                        <div className={cx('content-shortcut')}>
+                            <div>Mute / unmute video</div>
+                            <FontAwesomeIcon icon={faM} />
+                        </div>
+                        <div
+                            className={cx('close-shortcut')}
+                            onClick={(e) => {
+                                setShortcut(false);
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faClose} />
+                        </div>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }

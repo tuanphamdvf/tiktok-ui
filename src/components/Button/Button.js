@@ -26,6 +26,7 @@ function Button({
     followOutline,
     smallRed,
     largeRed,
+    smallBorder,
 
     ...passProps
 }) {
@@ -64,6 +65,7 @@ function Button({
         followOutline,
         smallRed,
         largeRed,
+        smallBorder,
     });
     return (
         <Comp className={classes} {...props}>

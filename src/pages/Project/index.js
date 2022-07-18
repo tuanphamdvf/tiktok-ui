@@ -1,5 +1,11 @@
+import Profile from '../ProFile';
+
 function Project() {
-    return <></>;
+    return (
+        <>
+            <Profile />
+        </>
+    );
 }
 
 export default Project;

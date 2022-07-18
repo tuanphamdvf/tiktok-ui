@@ -152,13 +152,19 @@
 }
 
 ///responsive
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 524px) {
     .postvideo {
         margin-left: 16px;
     }
+    .container {
+        width: calc(100vw - 54px - 68px);
+    }
+    .wrapper {
+        width: calc(100vw - 54px - 68px);
+    }
     .video {
         margin: 0 16px;
-        width: 280px;
+        width: 260px;
         height: 450px;
     }
     .container-icon {

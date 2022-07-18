@@ -3,7 +3,6 @@ import classNames from 'classnames/bind';
 import styles from './Postvideo.module.scss';
 import Button from '~/components/Button/Button';
 import { useElementOnScreen } from '../Post';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { MusicIcon, TagIcon } from '~/components/Icon/icon';
 import { faCommentDots, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +13,7 @@ import { Share } from '../../Share';
 const cx = classNames.bind(styles);
 const VideoInfo = ({ avatar, idName, nickName, music, content }) => {
     const cx = classNames.bind(styles);
+    let isFollow = false;
 
     return (
         <>
@@ -38,7 +38,7 @@ const VideoInfo = ({ avatar, idName, nickName, music, content }) => {
                     </div>
                     <div></div>{' '}
                     <div className={cx('btn-fl')}>
-                        <Button followOutline>Follow</Button>
+                        {!isFollow ? <Button followOutline>Follow</Button> : <Button text>Following</Button>}
                     </div>
                 </div>
             </div>
