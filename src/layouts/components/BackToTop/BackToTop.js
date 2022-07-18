@@ -68,7 +68,7 @@ function ScrollToTop() {
                             <div className={cx('wrapper-img')}>
                                 <img
                                     className={cx('footer-img')}
-                                    src="https://toppng.com/uploads/preview/vela-sciences-amazon-store-buy-on-amazon-butto-11562867227vnxlqv7rp0.png"
+                                    src="https://www.citypng.com/public/uploads/small/11596322270ztuss4jtqakdzpp8imcr2pqfliofxicuhgeauixlquqsxyjsmzs2izrwtevhgat3acd7bytrnmaed7ebpemv6zgfbhocgjn2yacw.png"
                                     alt="img"
                                 ></img>
                                 <img

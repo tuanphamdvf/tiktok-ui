@@ -133,7 +133,6 @@ function Header() {
         if (menuItem.title === 'Log out') {
             logout();
         } else if (menuItem.title === 'Keyboard shortcuts') {
-            console.log(shortcut);
             setShortcut(true);
         } else {
             console.log(menuItem);
@@ -199,7 +198,7 @@ function Header() {
                             </Tippy>
                             {showMess && <Messages />}
 
-                            <Tippy content="Messgae" placement="bottom">
+                            <Tippy content="Message" placement="bottom">
                                 <button onClick={() => setShowMess(!showMess)} className={cx('action-btn')}>
                                     <InboxIcon />
                                 </button>
